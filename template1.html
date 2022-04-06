@@ -1,0 +1,35 @@
+ # C:\Users\Sam\OneDrive\Escritorio\django-proyecto\Proyecto1\plantillas\template1.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+
+    <h1>Excelente!!!!!!!.... Es muy facíl usar plantillas.</h1>
+
+    <p style="color: cyan ">Mi nombre es: {{nombre}}</p>
+    <p style="color: red">Mi apellido es: {{apellido}}</p>
+    <h2>Este template fue creado {{hoy}}</h2>
+    <h3>Estas son mis notas de la Universidad: </h3>
+
+    <p> 
+    {for n in notas % }
+        {% if n < 4 %} 
+           <p style = "color:red"> NOTA MALA {{n}}</p> 
+        {% else %} <p style = "color:blue">     NOTA BUENA {{n}}</p> 
+        {% endif %}
+    {% endfor %}  
+    </p> 
+               
+    
+    </p>
+
+    </div>
+</body>
+</html>
